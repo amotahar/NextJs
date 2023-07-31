@@ -1,47 +1,18 @@
-import React from 'react';
-import { Breadcrumb, Button, Layout, Menu, theme } from 'antd';
-import Link from 'next/link';
-import RootLayout from '../../components/Layouts/RootLayout';
-const { Header, Content, Footer } = Layout;
-const HomePage = () => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
-  return (
-    <Layout className="layout">
 
-      <Content
-        style={{
-          padding: '0 50px',
-        }}
-      >
-        <Breadcrumb
-          style={{
-            margin: '16px 0',
-          }}
-        >
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
-        <div
-          className="site-layout-content"
-          style={{
-            background: colorBgContainer,
-            minHeight:"100vh",
-          }}
-        >
-          
-        </div>
-      </Content>
-      <Footer
-        style={{
-          textAlign: 'center',
-        }}
-      >
-        Ant Design ©2023 Created by Ant UED
-      </Footer>
-    </Layout>
+import Head from 'next/head';
+import RootLayout from '../components/Layouts/RootLayout';
+
+const HomePage = () => {
+  return (
+   <div>
+    <Head>
+      <title>
+          Next Home Page
+          <meta name="home page" description="this page is created by meta" />
+      </title>
+    </Head>
+    <h1>This is home page</h1>
+   </div>
   );
 };
 export default HomePage;
